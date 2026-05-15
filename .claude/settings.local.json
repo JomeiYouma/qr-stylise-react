@@ -23,7 +23,8 @@
       "Bash(node --input-type=module -e ' *)",
       "Bash(npm install *)",
       "Bash(node -e \"console.log\\('three', require\\('./node_modules/three/package.json'\\).version\\); console.log\\('r3f', require\\('./node_modules/@react-three/fiber/package.json'\\).version\\)\")",
-      "Bash(curl -s -o /dev/null -w \" %{http_code}\" \"http://localhost:5180/src/components/Silk.jsx\")"
+      "Bash(curl -s -o /dev/null -w \" %{http_code}\" \"http://localhost:5180/src/components/Silk.jsx\")",
+      "Bash(git commit *)"
     ]
   }
 }
