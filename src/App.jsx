@@ -104,7 +104,15 @@ export default function App() {
         </div>
 
         <footer className="footer">
-          Gratuit et illimité · 100 % côté client · Coded by Youma
+          Gratuit et illimité · 100 % côté client · Coded by{' '}
+          <a
+            className="footer-credit"
+            href="https://jomeiyouma.github.io/portfolio/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Youma
+          </a>
         </footer>
       </div>
 

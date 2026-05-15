@@ -632,3 +632,13 @@ input:focus-visible, select:focus-visible, textarea:focus-visible { outline: non
   font-size: 12px;
   padding: 8px;
 }
+.footer-credit {
+  color: var(--accent-2);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.15s var(--easing);
+}
+.footer-credit:hover {
+  color: var(--text);
+  text-decoration: underline;
+}
