@@ -104,7 +104,7 @@ export default function App() {
         </div>
 
         <footer className="footer">
-          Fait avec ❤ · 100 % côté client · déployable sur GitHub Pages
+          Gratuit et illimité · 100 % côté client · Coded by Youma
         </footer>
       </div>
 
