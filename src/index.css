@@ -1,0 +1,98 @@
+/* ---------- Design tokens ---------- */
+/* Art direction tuned around the Silk background (#7B7481): a quiet,
+   desaturated mauve-charcoal world with soft silvery-lavender accents. */
+:root {
+  --bg-0: #131116;
+  --bg-1: #19171e;
+  --bg-2: #211e27;
+
+  --surface: rgba(30, 27, 36, 0.55);
+  --surface-strong: rgba(38, 34, 46, 0.82);
+  --border: rgba(225, 218, 235, 0.10);
+  --border-strong: rgba(225, 218, 235, 0.20);
+
+  --text: #f3f1f6;
+  --text-dim: #c5bfd2;
+  --muted: #8d8698;
+
+  /* Silvery-lavender family derived from the silk tone. */
+  --accent: #b9adcb;
+  --accent-2: #d9d0e6;
+  --accent-3: #8f8799;
+  --accent-soft: rgba(185, 173, 203, 0.16);
+  --grad: linear-gradient(135deg, #b9adcb, #d9d0e6);
+  --grad-dim: linear-gradient(135deg, rgba(185, 173, 203, 0.5), rgba(217, 208, 230, 0.5));
+
+  --danger: #d98a8a;
+  --ok: #9ec4a8;
+
+  --radius: 16px;
+  --radius-sm: 11px;
+  --shadow-1: 0 1px 0 rgba(255, 255, 255, 0.05) inset, 0 16px 50px rgba(0, 0, 0, 0.5);
+  --ring: 0 0 0 2px rgba(185, 173, 203, 0.5);
+  --easing: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ---------- Reset ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Inter, "Helvetica Neue", Arial, sans-serif;
+  font-feature-settings: "ss01", "cv11";
+  color: var(--text);
+  background: var(--bg-0);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+button { font-family: inherit; }
+input, select, textarea, button { font: inherit; color: inherit; }
+a { color: var(--accent-2); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ---------- Silk background ---------- */
+.silk-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background: var(--bg-0);
+}
+.silk-bg canvas { display: block; width: 100% !important; height: 100% !important; }
+
+/* Scrim: keeps the silk visible while guaranteeing UI legibility. */
+.silk-veil {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(120% 90% at 50% 0%, rgba(19, 17, 22, 0.15) 0%, rgba(19, 17, 22, 0.55) 55%, rgba(19, 17, 22, 0.82) 100%),
+    linear-gradient(180deg, rgba(19, 17, 22, 0.30), rgba(19, 17, 22, 0.30));
+}
+
+/* ---------- Scrollbars ---------- */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: rgba(225, 218, 235, 0.10);
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover { background: rgba(225, 218, 235, 0.20); }
+
+/* ---------- Selection ---------- */
+::selection { background: rgba(185, 173, 203, 0.40); color: #fff; }
+
+/* ---------- Utility ---------- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

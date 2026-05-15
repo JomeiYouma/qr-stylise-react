@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:5180)",
+      "Bash(npx vite *)",
+      "Bash(curl -s http://localhost:5180/src/lib/defaults.js)",
+      "Bash(curl -s \"http://localhost:5180/src/App.jsx\")",
+      "Bash(curl -s \"http://localhost:5180/src/components/Preview.jsx\")",
+      "Bash(node -e \"const s=require\\('fs'\\).readFileSync\\('node_modules/qr-code-styling/lib/qr-code-styling.js','utf8'\\); const i=s.indexOf\\('update\\('\\); console.log\\(s.slice\\(i-40,i+700\\)\\);\")",
+      "Bash(node -e \"const s=require\\('fs'\\).readFileSync\\('node_modules/qr-code-styling/lib/qr-code-styling.js','utf8'\\); const i=s.indexOf\\('prototype.update='\\); console.log\\(s.slice\\(i,i+500\\)\\); const j=s.indexOf\\('prototype.append='\\); console.log\\('---APPEND---'\\); console.log\\(s.slice\\(j,j+500\\)\\);\")",
+      "Bash(node -e \"const s=require\\('fs'\\).readFileSync\\('node_modules/qr-code-styling/lib/qr-code-styling.js','utf8'\\); const i=s.indexOf\\('prototype.update='\\); console.log\\(s.slice\\(i,i+1200\\)\\);\")",
+      "Bash(node -e \"const s=require\\('fs'\\).readFileSync\\('node_modules/qr-code-styling/lib/qr-code-styling.js','utf8'\\); let i=s.indexOf\\('round'\\); while\\(i!==-1 && i<s.length\\){ const seg=s.slice\\(i-60,i+120\\); if\\(/round/.test\\(seg\\) && /background|Background|borderRadius|rect|min\\\\\\(/.test\\(seg\\)\\){ console.log\\('...'+seg.replace\\(/\\\\n/g,' '\\)+'...\\\\n'\\); } i=s.indexOf\\('round', i+1\\); if\\(i>200000\\) break; }\")",
+      "Bash(node -e \"const s=require\\('fs'\\).readFileSync\\('node_modules/qr-code-styling/lib/qr-code-styling.js','utf8'\\); const i=s.indexOf\\('prototype.drawBackground='\\); console.log\\(s.slice\\(i,i+650\\)\\);\")",
+      "Bash(node -e \"const s=require\\('fs'\\).readFileSync\\('node_modules/qr-code-styling/lib/qr-code-styling.js','utf8'\\); const i=s.indexOf\\('prototype.drawBackground='\\); console.log\\(s.slice\\(i+650,i+1250\\)\\);\")",
+      "Bash(ls -la public)",
+      "Bash(find public *)",
+      "Bash(node -e \"const fs=require\\('fs'\\);const x=fs.readFileSync\\('dist/favicon.svg','utf8'\\);const o=\\(x.match\\(/<rect/g\\)||[]\\).length;const op=\\(x.match\\(/<svg|<g|<defs|<linearGradient|<stop/g\\)||[]\\).length;console.log\\('favicon.svg copied to dist:', fs.existsSync\\('dist/favicon.svg'\\)\\);console.log\\('rect count:',o,'| structural tags:',op\\);console.log\\('well-formed:', x.trim\\(\\).startsWith\\('<svg'\\) && x.trim\\(\\).endsWith\\('</svg>'\\)\\);\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:5180/favicon.svg)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"http://localhost:5180/src/components/BrandMark.jsx\")",
+      "Bash(node -e ' *)",
+      "Bash(curl -s \"http://localhost:5180/src/lib/defaults.js\")",
+      "Bash(node --input-type=module -e ' *)",
+      "Bash(npm install *)",
+      "Bash(node -e \"console.log\\('three', require\\('./node_modules/three/package.json'\\).version\\); console.log\\('r3f', require\\('./node_modules/@react-three/fiber/package.json'\\).version\\)\")",
+      "Bash(curl -s -o /dev/null -w \" %{http_code}\" \"http://localhost:5180/src/components/Silk.jsx\")"
+    ]
+  }
+}
