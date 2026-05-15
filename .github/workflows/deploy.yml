@@ -29,6 +29,13 @@ jobs:
           node-version: 20
           cache: npm
 
+      # Enables Pages and switches the source to "GitHub Actions"
+      # automatically (no manual Settings step needed).
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
       - name: Install dependencies
         run: npm ci
 
